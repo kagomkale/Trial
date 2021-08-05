@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="AutomationEdgeSuite_6.0.0" verbose="10" parallel="false">
+  <test thread-count="1" name="Test">
+<classes>
+		<!-- 	<class name="com.ae.qa.testcases.TenantsPageTest">
+				<methods>
+					<include name="validateAddNewTenant" />
+					<include name="validateaddNewTenantsWithDuplicateOrgCode" />
+				</methods>
+			</class> -->
+			
+			<class name="com.ae.qa.testcases.SystemSettingsPageTest"> 
+				<methods>
+					<include name="validateServerUrlTest" /> 
+<!-- 					<include name="validateEditCleanUpRequest" />  -->
+<!--  					<include name="ValidateDRServerUrlTest" />  -->
+ 				</methods> 
+ 			</class>
+</classes>
+  </test> <!-- Test -->
+   <listeners>
+  		<listener class-name="com.ae.qa.Listeners.ITestListenerImplementation"></listener>
+  </listeners>
+</suite> <!-- Suite -->

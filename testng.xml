@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="AutomationEdgeSuite_5.5.0" verbose="10"
+	parallel="false">
+	<test thread-count="1" name="Test">
+
+		<classes>
+			<class name="com.ae.qa.testcases.TenantsPageTest"> 
+ 				<methods> 
+ 					<include name="validateAddNewTenant" /> 
+ 					<include name="validateaddNewTenantsWithDuplicateOrgCode" /> 
+					<include name="verifyLicenseInfoTest" /> 
+				</methods> 
+			</class> 
+			<class name="com.ae.qa.testcases.SystemUsersPageTest"> 
+				<methods>
+					<include name="creatingSystemAdminTest" />
+ 					<include name="validatePasswordMismatch" /> 
+ 					<include name="validateEditSystemUsers" /> 
+				</methods>
+			</class>
+		 	<class name="com.ae.qa.testcases.TenantUsersPageTest">
+				<methods>
+					<include name="creatingTenantAdminTest" />
+					<include name="EditTenantUserTest" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcases.SystemSettingsPageTest">
+				<methods>
+					<include name="validateServerUrlTest" />
+					<include name="validateEditCleanUpRequest" />
+					<include name="ValidateDRServerUrlTest" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcases.AuditLogsPageTest">
+				<methods>
+					<include name="validatedownloadingAuditLogs" />
+					<include name="validatecheckColumnsInAuditLogs" />
+					<include name="validatedeselectAllInAuditLogs" />
+					<include name="verifySpecificColumnTest" />
+					<include name="verifycheckLogsTest" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcases.InformationPageTest">
+				<methods>
+					<include name="validateLastLoginTest" />
+					<include name="validateViewProfileTest" />
+					<include name="validateChangePasswordTest" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcases.SecurityQuestionsPageTest">
+				<methods>
+					<include name="validateSkipQuesTest" />
+					<include name="validateSecurityQuesTest" />
+					<include name="validateSkipThenSetQuesTest" />
+					<include name="validateUpdatingSecurityQuesTest" />
+					<include name="validateUpdatingSecQuesWithWrongPswdTest" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcases.LoginPageTest">
+				<methods>
+					<include name="validateForgotPswdTest" />
+					<include name="ValidateResetPswdTest" />
+					<include name="ValidateLoginWithResetPswdTest" />
+					<include name="ValidateForgotPswdWithoutSecQuesTest" />
+					<include name="ValidateSettingPwdWOComplexityTest" />
+					<include name="validateUnlockUserWithSecQueAndResetPswdTest" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcases.SmtpPageTest">
+				<methods>
+					<include name="validateAddSmtpServerTest" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcases.SysadminPolicyPageTest">
+				<methods>
+					<include name="validatePasswordHistoryTest" />
+					<include name="validatePswdComplexityTest" />
+					<include name="validateNoOfAttemptsTest" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcases.PluginAssignmentsPageTest">
+				<methods>
+					<include name="validateAssignPluginSingleTenantTest" />
+					<include name="validateAssignPluginAllTenantTest" />
+					<include name="validateAssignPluginToMultipleTenantTest" />
+					<include name="validateAssignTenantSinglePluginTest" />
+					<include name="validateAssignTenantMultiplePluginsTest" />
+					<include name="validateAssignTenantAllPluginsTest" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcases.PurgePolicyPageTest">
+				<methods>
+					<include name="validatePurgePolicyDurationTest" />
+					<include name="validateUpdatePurgePolicyEntityTest"/>
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcases.PurgeSchedulePageTest">
+				<methods>
+					<include name="validatePurgingScheduleDayTest" />
+					<include name="validatePurgingScheduleWeekendTest" />
+				</methods>
+			</class>
+			<class name="com.ae.qa.testcases.IntegrationServicePageTest">
+				<methods>
+					<include name="validateAddIntegrationServicesTest" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+	 <listeners>
+  		<listener class-name="com.ae.qa.Listeners.ITestListenerImplementation"></listener>
+  </listeners>
+</suite> <!-- Suite -->
+
+
+

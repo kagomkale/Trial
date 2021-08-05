@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="10" name="Failed suite [AutomationEdgeSuite_6.0.0]">
+  <listeners>
+    <listener class-name="com.ae.qa.Listeners.ITestListenerImplementation"/>
+  </listeners>
+  <test thread-count="5" verbose="10" name="Test(failed)">
+    <classes>
+      <class name="com.ae.qa.testcases.SystemSettingsPageTest">
+        <methods>
+          <include name="ValidateDRServerUrlTest" invocation-numbers="0"/>
+          <include name="endReport"/>
+          <include name="setExtent"/>
+          <include name="initialization"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- com.ae.qa.testcases.SystemSettingsPageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [AutomationEdgeSuite_6.0.0] -->
